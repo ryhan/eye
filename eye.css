@@ -1,5 +1,12 @@
 /* eye.css */
 
+#video{
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 body{
   background-color: black;
   margin: 0 auto;
@@ -17,7 +24,7 @@ div{
   margin: 0 auto;
   overflow: hidden;
 
-  -webkit-animation: swingeye 15s infinite; 
+  -webkit-animation: swingeye 30s infinite; 
 }
 .sclera,
 .iris,
@@ -71,9 +78,13 @@ div{
 @-webkit-keyframes swingeye /* Safari and Chrome */
 {
   0%, 100% {left: 0px}
-  15%{ left: 0; }
-  38%{ left: -250px;}
-  65%{ left: 20px;}
+  20%{ left: 0; }
+  25%{ left: -250px;}
+  45%{ left: 20px;}
+
+  70%{ left: 0; }
+  75%{ left: 300px;}
+  95%{ left: -50px;}
 }
 
 
@@ -89,4 +100,23 @@ div{
   53%  {top: -10px;}
   57%{ top: 0px;}
   60%{ top: -400px;}
+}
+
+.cansee{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: red;
+  background-color: #222;
+  text-align: center;
+  box-sizing: border-box;
+
+  font-family: "proxima-nova-soft",sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  padding: 30px;
+  text-align: center;
+  color: white;
 }
