@@ -1,0 +1,92 @@
+/* eye.css */
+
+body{
+  background-color: black;
+  margin: 0 auto;
+  padding: 150px;
+  text-align: center;
+}
+div{
+  box-sizing: border-box;
+  position: relative;
+}
+
+.eye{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  -webkit-animation: swingeye 15s infinite; 
+}
+.sclera,
+.iris,
+.pupil,
+.lensflare,
+.eyelid{
+  border-radius: 10000px;
+}
+
+.sclera{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  padding: 75px;
+}
+
+.iris{
+  background-color: steelblue;
+  width: 250px;
+  height: 250px;
+  padding: 75px;
+}
+
+.pupil{
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+
+.lensflare{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -15px;
+  left: 0px;
+}
+
+.eyelid{
+  background-color: black;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.5, 1); 
+
+  -webkit-animation: bateye 5s infinite; 
+}
+
+@-webkit-keyframes swingeye /* Safari and Chrome */
+{
+  0%, 100% {left: 0px}
+  15%{ left: 0; }
+  38%{ left: -250px;}
+  65%{ left: 20px;}
+}
+
+
+@-webkit-keyframes bateye /* Safari and Chrome */
+{
+  0%, 100% {top: -400px;}
+  22%{ top: -400px;}
+  25%  {top: -10px;}
+  27%  {top: -10px;}
+  30%{ top: -400px;}
+
+  48%{ top: -400px;}
+  53%  {top: -10px;}
+  57%{ top: 0px;}
+  60%{ top: -400px;}
+}
